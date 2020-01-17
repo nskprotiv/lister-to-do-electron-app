@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <title>To-do app</title>
+    <style>
+      .titletwo {
+      color: blue;
+      text-align: center;}
+     </style>
+  </head>
+  <body>
+    <h1 class="titletwo">To-do list</h1>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    <input type="text" value="Type here to add item" id="box"/>
+    <br/>
+    <input type="button" value="Add item" onclick="addItem();"/>
+    <br/>
+    <div id="list"></div>
+    <script>
+      function addItem() {
+        var newItem = document.createElement("div");
+        newItem.innerHTML = document.getElementById("box").value;
+        document.getElementById("list").appendChild(newItem);
+      }
+     </script> 
+    <div style="color: red;">Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script> were used to create this app.</div>
+
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+  </body>
+</html>

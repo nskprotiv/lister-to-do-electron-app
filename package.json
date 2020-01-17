@@ -1,0 +1,16 @@
+{
+  "name": "To-do app",
+  "productName": "Lister",
+  "description": "A to-do app",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "Mikhail Kleptsov",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "5.0.0-beta.7"
+  }
+}
